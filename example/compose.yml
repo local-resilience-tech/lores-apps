@@ -14,7 +14,7 @@ services:
         window: 60s
       labels:
         traefik.enable: "true"
-        traefik.http.routers.web.rule: "Host(`example.lores.localhost`)"
+        traefik.http.routers.web.rule: "Host(`example.${NODE_LOCAL_DOMAIN}`)"
         traefik.http.routers.web.entryPoints: web
         traefik.http.routers.web.service: web
         traefik.http.services.web.loadbalancer.server.port: 80
